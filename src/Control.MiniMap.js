@@ -32,8 +32,8 @@
 			zoomAnimation: false,
 			autoToggleDisplay: false,
 			minimized: false,
-			width: 150,
-			height: 150,
+			width: '150px',
+			height: '150px',
 			collapsedWidth: 19,
 			collapsedHeight: 19,
 			aimingRectOptions: {color: '#ff7800', weight: 1, clickable: false},
@@ -57,8 +57,8 @@
 
 			// Creating the container and stopping events from spilling through to the main map.
 			this._container = L.DomUtil.create('div', 'leaflet-control-minimap');
-			this._container.style.width = this.options.width + 'px';
-			this._container.style.height = this.options.height + 'px';
+			this._container.style.width = this.options.width;
+			this._container.style.height = this.options.height;
 			L.DomEvent.disableClickPropagation(this._container);
 			L.DomEvent.on(this._container, 'mousewheel', L.DomEvent.stopPropagation);
 
